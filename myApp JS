@@ -1,0 +1,90 @@
+//myApp JavaScript
+
+
+function userInformation()
+{
+	var name = document.getElementById("name");
+	var phone = document.getElementById("phone");
+	var email = document.forms["userInformation"]["email"].value;
+	var emailAtSign = email.indexOf("@");
+	var emailDot = email.indexOf (".");
+	var adults = document.getElementById("adults");
+	var children = document.getElementById("children");
+	var departure = document.getElementById("departure");
+	var returnDate = document.getElementById("returnDate");
+	var formValidation = true;
+	var error = "";
+	
+	
+	
+	if (!name.value.match (/^[A-z]+$/))
+		{
+			error += "Invalid Name.\n";
+			formValidation = false;
+		}
+		
+		if (!phone.value.match (/^\d{10}$/))
+		
+		{
+       error += "Invalid Phone Number. (10 digits, no dashes)\n";
+	   formValidation = false;
+			
+		}
+		
+	if(emailAtSign < 1 || emailDot<emailAtSign+2 || emailDot+2>=email.length)
+		
+	{
+		error += "Invalid E-mail.\n";
+		formValidation = false;
+		
+	}
+		
+			if (adults.value == "")
+		
+		{
+			error += "Invalid Number of Adults Traveling.\n";
+			formValidation = false;
+			
+			
+		}
+		
+			if (children.value == "")
+		
+		{
+			error += "Invalid Number of Children Traveling.\n";
+			formValidation = false;
+			
+			
+		}
+		
+			if (departure.value == "")
+		
+		{
+			error += "Invalid Date of Departure.\n";
+			formValidation = false;
+			
+			
+		}
+		
+			if (returnDate.value == "")
+		
+		{
+			error += "Invalid Date of Return.\n";
+			formValidation = false;
+			
+			
+		}
+	
+	
+	if(error != "")
+	{
+		alert("Your Submission Contains The Following Errors:\n" + error);
+	
+	}
+	
+	else return false;
+}
+
+
+	
+	
