@@ -25,20 +25,19 @@ body { background-color: #D3D3D3; }
 <center>
 <font color= #4169E1><b>
 <form action = "" id = "userInformation" onsubmit= "return false">
-Name: <input type = "text" id = "name" maxlength="50" /><br><br>
+First Name: <input type = "text" id = "firstName" maxlength="50" /><br><br>
+Last Name: <input type = "text" id = "lastName" maxlength="50" /><br><br>
 Phone Number: <input type="text" id = "phone" maxlength="10"/> <br><br>
 E-mail: <input type="text" id = "email"/> <br><br>
-Number of Adults Traveling: <input type="text" id = "adults" maxlength="10"/><br><br>
-Number of Children Traveling: <input type="text" id = "children" maxlength="10"/><br><br>
+Number of Adults Traveling: <input type="number" id = "adults" maxlength="10"/><br><br>
+Number of Children Traveling: <input type="number" id = "children" maxlength="10"/><br><br>
 Date of Departure: <input type="date" id = "departure"/><br><br>
 Date of Return: <input type="date" id = "returnDate"/> <br><br>
 </font></b>
-</form>
-</body>  
+  
     
 <body ng-app="">
-<form>
-<font color= #DC143C><b>Choose a city</font></b>
+<font color= #DC143C><b>Please Select a Destination</font></b>
 	<font color= #4169E1>
      <p><input type="radio" ng-model="myVar" value="Brisbane">Brisbane, Austrailia</p>
      <p><input type="radio" ng-model="myVar" value="Vancouver">Vancouver, Canada</p>
@@ -46,17 +45,19 @@ Date of Return: <input type="date" id = "returnDate"/> <br><br>
      <p><input type="radio" ng-model="myVar" value="Berlin">Berlin, Germany</p>
      <p><input type="radio" ng-model="myVar" value="Cancun">Cancun, Mexico</p>
 	 </font>
-	</form>
+	 
+<br />
 
 <div ng-switch="myVar">
     
      <div ng-switch-when="Brisbane">
-     <h1>Brisbane, Australia</h1>
-     <p><font color= #DC143C><b>Select which activity you would like to do</font></b></p>
+<p><font color= #DC143C><b>You selected:</font></b></p>
+     	<font color= #4169E1><h1>Brisbane, Australia</h1></font>
+     <p><font color= #DC143C><b>Select which activities you would like to do</font></b></p>
      <form>
 
 		
-        <td width="280px">
+        <td width="280px"> <font color= #4169E1>
             <label>
             <input type ="checkbox"  value = "100" id ="tours"/> City Tours
             </label> 
@@ -87,16 +88,16 @@ Date of Return: <input type="date" id = "returnDate"/> <br><br>
        
         </td>
        </tr>
-      </form>
     </div>
     
     
      <div ng-switch-when="Vancouver">
-     <h1>Vancouver, Canada</h1>
-     <p><font color= #DC143C><b>Select which activity you would like to do</font></b></p>
+<p><font color= #DC143C><b>You selected:</font></b></p>
+     	<font color= #4169E1><h1>Vancouver, Canada</h1></font>
+     <p><font color= #DC143C><b>Select which activities you would like to do</font></b></p>
      <form>
 		
-        <td width="280px">
+        <td width="280px"> 
             <label>
             <input type ="checkbox"  value = "400" id ="museums"/> Museums		
         	</label> 
@@ -127,14 +128,14 @@ Date of Return: <input type="date" id = "returnDate"/> <br><br>
        
         </td>
        </tr>
-      </form>
     </div>
     
     
     
      <div ng-switch-when="NewYork">
-     <h1>New York City, United States</h1>
-     <p><font color= #DC143C><b>Select which activity you would like to do</font></b></p>
+<p><font color= #DC143C><b>You selected:</font></b></p>
+     	<font color= #4169E1><h1>New York City, United States</h1></font>
+     <p><font color= #DC143C><b>Select which activitites you would like to do</font></b></p>
      <form>
 		
         <td width="280px">
@@ -161,15 +162,15 @@ Date of Return: <input type="date" id = "returnDate"/> <br><br>
             </label> 
        
         </td>
-       </tr>
-      </form>       
+       </tr>      
     </div>
     
     
     
      <div ng-switch-when="Berlin">
-     <h1>Berlin, Germany</h1>
-     <p><font color= #DC143C><b>Select which activity you would like to do</font></b></p>
+<p><font color= #DC143C><b>You selected:</font></b></p>
+     	<font color= #4169E1><h1>Berlin, Germany</h1></font>
+     <p><font color= #DC143C><b>Select which activities you would like to do</font></b></p>
      <form>
 		
         <td width="280px">
@@ -191,15 +192,15 @@ Date of Return: <input type="date" id = "returnDate"/> <br><br>
        
         </td>
        </tr>
-      </form>
     </div>
     
     
     
     
      <div ng-switch-when="Cancun">
-     <h1>Cancun, Mexico</h1>
-     <p><font color= #DC143C><b>Select which activity you would like to do</font></b></p>
+<p><font color= #DC143C><b>You selected:</font></b></p>
+     	<font color= #4169E1><h1>Cancun, Mexico</h1></font>
+     <p><font color= #DC143C><b>Select which activities you would like to do</font></b></p>
      <form>
 		
         <td width="280px">
@@ -227,12 +228,12 @@ Date of Return: <input type="date" id = "returnDate"/> <br><br>
        
         </td>
        </tr>
+	     	<font color= #4169E1>
 	   	   </form>
-	   </div>
-
+		   </div>
 <br />
 
-<input type = "reset" id = "reset"/>
+<input type = "reset" id = "reset"/>                   
 
 <input type = "submit" id = "submit" onclick = "userInformation();" value = "Submit"/>
 
@@ -243,7 +244,7 @@ Date of Return: <input type="date" id = "returnDate"/> <br><br>
 </script>
 
 
-
+</div>
 </div>
 </div>
 </div>
