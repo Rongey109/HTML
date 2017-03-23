@@ -3,7 +3,8 @@
 
 function userInformation()
 {
-	var name = document.getElementById("name");
+	var firstName = document.getElementById("firstName");
+	var lastName  = document.getElementById("lastName");
 	var phone = document.getElementById("phone");
 	var email = document.forms["userInformation"]["email"].value;
 	var emailAtSign = email.indexOf("@");
@@ -16,10 +17,15 @@ function userInformation()
 	var error = "";
 	
 	
-	
-	if (!name.value.match (/^[A-z]+$/))
+		if (!firstName.value.match (/^[A-z]+$/))
 		{
-			error += "Invalid Name.\n";
+			error += "Invalid First Name\n";
+			formValidation = false;
+		}
+		
+	if (!lastName.value.match (/^[A-z]+$/))
+		{
+			error += "Invalid Last Name\n";
 			formValidation = false;
 		}
 		
@@ -84,7 +90,3 @@ function userInformation()
 	
 	else return false;
 }
-
-
-	
-	
