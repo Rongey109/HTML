@@ -15,7 +15,6 @@ body { background-color: #D3D3D3; }
 </style>
 <body>
 <center>
-<img src="travel.png" alt="Mega Travel" style="position: relative;">
 <br>
 <font color= #DC143C><b>
 	Please fill out the required criteria</font></b>
@@ -240,7 +239,7 @@ Date of Return: <input type="date" id = "returnDate"/> <br><br>
 </p>
 
 </form>
-<script type = "text/javascript" src="myApp.js">
+<script type = "text/javascript" src="myApp5.js">
 </script>
 
 
